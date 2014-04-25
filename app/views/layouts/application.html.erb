@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Books, sweet books</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  
+  
+  
+</head>
+<body>
+  
+    <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+    <div class="container">
+      <a href="#" class="brand">Books, sweet books </a>
+      <ul class="nav">
+        <li> <%= link_to "All Books", statuses_path %> </li>
+        <li> <%= link_to "I've just read new one!", new_status_path %> </li>
+      
+    </div>
+    </div>
+    </div>
+
+    <div class="container">
+      
+      <% flash.each do |name, msg| %>
+<%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+ 
+      <%= yield %>
+  </div>
+      
+ 
+
+</body>
+</html>
