@@ -5,6 +5,8 @@ class StatusesController < ApplicationController
   # GET /statuses.json
   def index
     @statuses = Status.all
+    
+    logger.debug @statuses.inspect
   end
 
   # GET /statuses/1

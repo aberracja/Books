@@ -7,6 +7,9 @@ gem 'rails', '4.0.0'
 gem 'sqlite3'
 gem 'devise'
 
+# NO I DLACZEGO JAK TO DODAŁAM TO W ROUTSACH COS NIE TAK?:
+gem 'protected_attributes'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
